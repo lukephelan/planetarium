@@ -1,3 +1,9 @@
+<% if @planet.errors.any? %>
+  <% @planet.errors.full_messages.each do |msg| %>
+    <p><%= msg %></p>
+  <% end %>
+<% end %>
+
 <%= form_for :planet, url: planets_path do |f| %>
   Name: <%= f.text_field :name %><br>
   Diameter: <%= f.number_field :diameter %><br>

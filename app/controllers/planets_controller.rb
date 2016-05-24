@@ -3,11 +3,16 @@ class PlanetsController < ApplicationController
   end
 
   def new
+    @planet = Planet.new
   end
 
   def create
-    planet = Planet.create planet_params
-    redirect_to planets_path
+    @planet = Planet.create planet_params
+    if @planet.valid?
+      redirect_to planets_path
+    else
+      redirect_to new_planet_path
+    end
   end
 
   def planet_params
