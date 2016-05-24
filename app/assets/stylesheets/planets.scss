@@ -1,3 +1,35 @@
 // Place all the styles related to the planets controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+html {
+  background-image: url("old_moon/old_moon.png");
+  font-family: 'Poiret One', cursive;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Bangers', cursive;
+  font-size: 4em;
+}
+
+h2 {
+  font-size: 3em;
+  font-family: 'Bangers', cursive;
+}
+
+h3 {
+  font-size: 2em;
+}
+
+p {
+  font-size: 1.5em;
+}
+
+form {
+  font-size: 1.5em;
+}
+
+.create_planet_btn {
+  font-size: 1.5em;
+}

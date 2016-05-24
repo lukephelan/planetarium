@@ -1,5 +1,7 @@
+<h2>Add New Planet</h2>
+
 <% if flash[:errors] %>
-  <p><%= flash[:errors] %></p>
+  <p><%= flash[:errors] %>.</p>
 <% end %>
 
 <%= form_for :planet, url: planets_path do |f| %>
@@ -12,6 +14,6 @@
   Moons: <%= f.number_field :moons %><br>
   Image: <%= f.text_field :image %><br>
   Atmosphere: <%= f.text_field :atmosphere %><br>
-  Distance From Sun: <%= f.number_field :distance_from_sun %><br>
+  Distance From Sun: <%= f.number_field :distance_from_sun %><br><br>
   <%= f.submit "Create Planet", class: "create_planet_btn"%>
 <% end %>
