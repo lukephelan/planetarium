@@ -1,0 +1,17 @@
+<h2 class="planet_title"><%= @planet.name %> </h2>
+
+
+<img src="<%= @planet.image %>" width="500px" class="planet_picture" alt="No Image"></img>
+
+<p><b>Diameter: </b><%= @planet.diameter %> km<br>
+  <b>Solid: </b><%= @planet.solid %><br>
+  <b>Order from the Sun: </b><%= @planet.order %><br>
+  <b>Explored by Humans: </b><%= @planet.explored %><br>
+  <b>Has Rings: </b><%= @planet.rings %><br>
+  <b>Number of Moons: </b><%= @planet.moons %><br>
+  <b>Atmosphere: </b><%= @planet.atmosphere %><br>
+  <b>Distance from the Sun: </b><%= @planet.distance_from_sun %> km</p>
+
+<%= link_to "Home", planets_path %><br>
+<%= link_to "Edit", edit_planet_path(@planet) %><br>
+<%= link_to "Delete", planet_path(@planet), method: :delete %>

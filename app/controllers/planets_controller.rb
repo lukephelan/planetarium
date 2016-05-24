@@ -20,4 +20,12 @@ class PlanetsController < ApplicationController
     params.required(:planet).permit(:name, :diameter, :rings, :moons, :order,
     :explored, :image, :distance_from_sun, :atmosphere, :solid)
   end
+
+  def show
+    @planet = Planet.find(params[:id])
+    respond_to do |format|
+      format.html { render 'planets/show' }
+      format.json { render json: @planet.to_json }
+    end
+  end
 end
