@@ -1,0 +1,13 @@
+<%= form_for :planet, url: planets_path do |f| %>
+  Name: <%= f.text_field :name %><br>
+  Diameter: <%= f.number_field :diameter %><br>
+  Solid: <%= f.check_box :solid %><br>
+  Order: <%= f.number_field :order %><br>
+  Explore: <%= f.check_box :explored %><br>
+  Rings: <%= f.check_box :rings %><br>
+  Moons: <%= f.number_field :moons %><br>
+  Image: <%= f.text_field :image %><br>
+  Atmosphere: <%= f.text_field :atmosphere %><br>
+  Distance From Sun: <%= f.number_field :distance_from_sun %><br>
+  <%= f.submit %>
+<% end %>
