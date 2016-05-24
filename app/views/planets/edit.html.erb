@@ -1,8 +1,8 @@
 <h2 class="edit_planet">Edit The Planet</h2>
 
-<%= form_for @planet, :method => :patch do |f| %>
+<p><%= form_for @planet, :method => :patch do |f| %>
   Name: <%= f.text_field :name %><br>
-  Diameter: <%= f.number_field :diameter %><br>
+  Diameter (km): <%= f.number_field :diameter %><br>
   Solid: <%= f.check_box :solid %><br>
   Order: <%= f.number_field :order %><br>
   Explore: <%= f.check_box :explored %><br>
@@ -10,6 +10,6 @@
   Moons: <%= f.number_field :moons %><br>
   Image: <%= f.text_field :image %><br>
   Atmosphere: <%= f.text_field :atmosphere %><br>
-  Distance From Sun: <%= f.number_field :distance_from_sun %><br><br>
+  Distance From Sun (km): <%= f.number_field :distance_from_sun %><br><br></p>
   <%= f.submit "Update", class: "edit_planet_btn"%>
 <% end %>
