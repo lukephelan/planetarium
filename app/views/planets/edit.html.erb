@@ -1,10 +1,6 @@
-<h2 class="new_planet">Add New Planet</h2>
+<h2 class="edit_planet">Edit The Planet</h2>
 
-<% if flash[:errors] %>
-  <p><%= flash[:errors] %>.</p>
-<% end %>
-
-<%= form_for :planet, url: planets_path do |f| %>
+<%= form_for @planet, :method => :patch do |f| %>
   Name: <%= f.text_field :name %><br>
   Diameter: <%= f.number_field :diameter %><br>
   Solid: <%= f.check_box :solid %><br>
@@ -15,5 +11,5 @@
   Image: <%= f.text_field :image %><br>
   Atmosphere: <%= f.text_field :atmosphere %><br>
   Distance From Sun: <%= f.number_field :distance_from_sun %><br><br>
-  <%= f.submit "Create Planet", class: "create_planet_btn"%>
+  <%= f.submit "Update", class: "edit_planet_btn"%>
 <% end %>

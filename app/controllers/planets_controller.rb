@@ -28,4 +28,8 @@ class PlanetsController < ApplicationController
       format.json { render json: @planet.to_json }
     end
   end
+
+  def edit
+    @planet = Planet.find(params[:id])
+  end
 end
