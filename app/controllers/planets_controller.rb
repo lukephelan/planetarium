@@ -11,7 +11,8 @@ class PlanetsController < ApplicationController
     if @planet.valid?
       redirect_to planets_path
     else
-      redirect_to new_planet_path
+      redirect_to new_planet_path, :flash => { :errors =>
+        @planet.errors.full_messages.join('. ') }
     end
   end
 

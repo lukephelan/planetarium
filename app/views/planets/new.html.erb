@@ -1,7 +1,5 @@
-<% if @planet.errors.any? %>
-  <% @planet.errors.full_messages.each do |msg| %>
-    <p><%= msg %></p>
-  <% end %>
+<% if flash[:errors] %>
+  <p><%= flash[:errors] %></p>
 <% end %>
 
 <%= form_for :planet, url: planets_path do |f| %>
